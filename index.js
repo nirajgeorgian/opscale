@@ -59,6 +59,41 @@ const succMessage = (res, data) => {
 	})
 }
 
+router.route("/users/:id")
+	.get((req, res) => {
+		if(req.params.id) {
+			Person.findById(req.params.id)
+				.then(person => {
+					succMessage(res, person)
+				})
+				.catch(err => {
+					errMessage(res, err)
+				})
+		}
+	})
+	.put((req, res) => {
+		if(req.params.id) {
+			Person.findByIdAndUpdate(req.params.id, { ...req.body }, (err, person) => {
+				if(person) {
+					succMessage(res, person)
+				} else {
+					errMessage(res, "err")
+				}
+			})
+		}
+	})
+	.delete((req, res) => {
+		if(req.params.id) {
+			Person.findByIdAndDelete(req.params.id, (err, person) => {
+				if(person) {
+					succMessage(res, person)
+				} else {
+					errMessage(res, "err")
+				}
+			})
+		}
+	})
+
 router.route("/users")
 	.post((req, res) => {
 		if(checkKeys({...req.body}, "name", "email", "phone")) {
