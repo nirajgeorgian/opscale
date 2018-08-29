@@ -1,0 +1,26 @@
+version: '3'
+services:
+  opscale:
+    container_name: opapi
+    build: .
+    ports:
+    - "3000:3000"
+    - "3030:3030"
+    depends_on:
+      - opmongo
+    volumes:
+      - .:/usr/src/app
+    networks:
+      - oooonetwork
+  opmongo:
+    container_name: opmongo
+    image: mongo
+    restart: always
+    ports:
+    - "27017:27017"
+    networks:
+      - oooonetwork
+
+networks:
+  oooonetwork:
+    driver: bridge

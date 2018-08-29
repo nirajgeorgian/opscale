@@ -9,7 +9,7 @@ const app = express()
 app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-mongoose.connect("mongodb://127.0.0.1:27017/dodo", {useNewUrlParser: true })
+mongoose.connect("mongodb://opmongo:27017/dodo", {useNewUrlParser: true })
 	.then(res => {
 		console.log("connected to database")
 	})
@@ -118,6 +118,6 @@ router.route("/users")
 
 app.use("/", router)
 
-app.listen(3000, () => {
-  console.log("listening on http://localhost:3000")
+app.listen(3030, () => {
+  console.log("listening on http://localhost:3030")
 })
