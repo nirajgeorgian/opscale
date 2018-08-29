@@ -3,10 +3,10 @@ FROM node:8
 WORKDIR /usr/src/app
 
 COPY package*.json ./
-COPY ./client/package*.json ./client/
-
 RUN npm install
+COPY ./client/package*.json ./client/
 RUN cd client && npm install
+
 WORKDIR /usr/src/app
 
 COPY . .
