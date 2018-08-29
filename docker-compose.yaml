@@ -10,6 +10,8 @@ services:
       - opmongo
     volumes:
       - .:/usr/src/app
+      - /usr/src/app/node_modules
+      - /usr/src/app/client/node_modules
     networks:
       - oooonetwork
   opmongo:
