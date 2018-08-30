@@ -15,7 +15,7 @@ class App extends Component {
     this.fetchALlPost()
   }
   fetchALlPost = () => {
-    axios.get('http://18.236.171.132:8080/users')
+    axios.get('http://18.236.171.132:8081/users')
       .then(data => {
         this.setState({
           users: data.data.data
@@ -42,7 +42,7 @@ class App extends Component {
   }
   formSubmit = event => {
     event.preventDefault()
-    axios.post('http://18.236.171.132:8080/users', this.state)
+    axios.post('http://18.236.171.132:8081/users', this.state)
     .then(data => this.fetchALlPost())
     .then(() => {
       this.setState({
@@ -54,7 +54,7 @@ class App extends Component {
   }
 
   onDelete = (person) => {
-    axios.delete(`http://18.236.171.132:8080/users/${person._id}`)
+    axios.delete(`http://18.236.171.132:8081/users/${person._id}`)
       .then(res => this.fetchALlPost())
   }
 
