@@ -6,7 +6,8 @@
   "scripts": {
     "front": "cd client && npm run start",
     "api": "node index.js",
-    "start": "concurrently \"npm run front\" \"npm run api\"",
+		"start": "node index.js",
+    "start:dev": "concurrently \"npm run front\" \"npm run api\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
