@@ -11,7 +11,7 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-EXPOSE 3030
-EXPOSE 3000
+EXPOSE 8081 
+EXPOSE 80 
 
 CMD ["npm", "start"]
