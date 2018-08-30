@@ -25,7 +25,7 @@ class Person extends Component {
 
 	formSubmit = event => {
     event.preventDefault()
-    axios.put(`http://localhost:8081/users/${this.props.person._id}`, this.state)
+    axios.put(`http://18.236.171.132:8080/users/${this.props.person._id}`, this.state)
 			.then(data => this.props.fetchALlPost())
 			.then(() => {
 				this.setState({
