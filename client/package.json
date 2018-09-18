@@ -6,10 +6,12 @@
     "axios": "^0.18.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-scripts": "1.1.5"
+    "react-scripts": "1.1.5",
+    "serve": "^10.0.1"
   },
   "scripts": {
-    "start": "export PORT=80 && react-scripts start",
+    "start": "export PORT=80 && serve -s build",
+    "dev": "export PORT=80 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
