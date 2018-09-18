@@ -10,8 +10,8 @@
     "serve": "^10.0.1"
   },
   "scripts": {
-    "start": "export PORT=80 && serve -s build",
-    "dev": "export PORT=80 && react-scripts start",
+    "start:prod": "export PORT=80 && serve -s build",
+    "start": "export PORT=80 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
