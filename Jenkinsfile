@@ -20,7 +20,7 @@ pipeline {
     }
 		post {
 			success {
-				sh 'Build and deploy success'
+				sh 'echo Build and deploy success'
 			}
 		}
 }
