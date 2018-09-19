@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Run') {
             steps {
-                echo 'here we have to run build'
+                echo 'here we have to run build.'
             }
         }
     }
