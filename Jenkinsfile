@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Run') {
             steps {
-                sh 'docker-compose up -d'
+                echo 'here we have to run build'
             }
         }
     }
