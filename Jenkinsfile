@@ -1,5 +1,8 @@
 pipeline {
   agent any
+  environment {
+    GITHUB_USERNAME='dodo'
+  }
   stages {
     // stage('Clean') {
     //   steps {
