@@ -119,5 +119,5 @@ router.route("/users")
 app.use("/", router)
 
 app.listen(8081, () => {
-  console.log("listening on http://localhost:3030")
+  console.log("listening on http://localhost:8081")
 })
