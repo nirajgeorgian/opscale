@@ -32,6 +32,7 @@ pipeline {
     }
 		success {
 			sh 'echo Build and deploy success'
+      echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL} job name ${env.JOB_NAME}"
 		}
 	}
 }
