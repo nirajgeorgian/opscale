@@ -1,7 +1,7 @@
 version: '3'
 services:
   opscale:
-    container_name: opapi_g
+    container_name: opapi
     build: .
     ports:
     - "80:80"
@@ -15,7 +15,7 @@ services:
     networks:
       - oooonetwork
   opmongo:
-    container_name: opmongo_g
+    container_name: opmongo
     image: mongo
     restart: always
     ports:
